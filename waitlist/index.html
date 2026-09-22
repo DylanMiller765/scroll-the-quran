@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Join the Waitlist – Scroll the Quran</title>
+<meta name="description" content="Be first to get Scroll the Quran, the app that replaces doomscrolling with the Quran. Waitlist members get $29.99 for their first year (normally $39.99).">
+<link rel="canonical" href="https://dylanmiller765.github.io/scroll-the-quran/waitlist/">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Join the Scroll the Quran waitlist">
+<meta property="og:description" content="Replace your scroll with the Quran. Waitlist members get $29.99 for their first year.">
+<meta property="og:url" content="https://dylanmiller765.github.io/scroll-the-quran/waitlist/">
+<meta property="og:image" content="https://dylanmiller765.github.io/scroll-the-quran/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+  .wl{max-width:520px;margin:0 auto;text-align:center;padding:24px 0 48px}
+  .wl img.mark{width:64px;height:auto;margin:8px auto 18px;display:block}
+  @media (prefers-color-scheme:dark){.wl img.mark{filter:invert(1)}}
+  .wl h1{font-size:clamp(36px,8vw,52px);margin-bottom:14px}
+  .perk{display:inline-block;background:var(--warm);border-radius:999px;padding:8px 16px;font-weight:600;font-size:15px;margin:4px 0 22px}
+  form{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+  input[type=email]{flex:1 1 240px;min-width:0;height:56px;border-radius:999px;border:1px solid var(--hair);background:var(--card);color:var(--ink);padding:0 22px;font-size:17px}
+  button{height:56px;border:0;border-radius:999px;background:var(--ink);color:var(--canvas);padding:0 26px;font-size:17px;font-weight:600;cursor:pointer}
+  .fine{color:var(--muted);font-size:14px;margin-top:14px}
+  .done{display:none;background:var(--card);border:1px solid var(--hair);border-radius:16px;padding:22px;margin-top:6px}
+  .phone{margin:36px auto 0}
+</style>
+</head>
+<body><div class="wrap">
+<nav><a href="../"><img src="../assets/app-icon.png" alt="">Scroll the Quran</a><a href="../support.html">Support</a></nav>
+<main class="wl">
+  <img class="mark" src="../assets/emblem.svg" alt="">
+  <h1 class="serif">Replace your scroll with the Quran.</h1>
+  <p class="lead" style="margin:0 auto 10px">One ayah per swipe, with Arabic, clear English and beautiful recitation. Launching on iPhone soon.</p>
+  <div class="perk">Waitlist gift: $29.99 for your first year <span style="font-weight:400;color:var(--muted)">(normally $39.99)</span></div>
+  <!-- FORM_ACTION: set to your email provider's form endpoint (e.g. Kit: https://app.kit.com/forms/<FORM_ID>/subscriptions). -->
+  <form id="wl" action="FORM_ACTION" method="post" target="wl-sink">
+    <input type="email" name="email_address" placeholder="you@email.com" required autocomplete="email" aria-label="Email address">
+    <input type="hidden" name="fields[source]" id="src" value="direct">
+    <button type="submit">Join the waitlist</button>
+  </form>
+  <iframe name="wl-sink" title="" style="display:none"></iframe>
+  <div class="done" id="done"><strong>You're on the list.</strong><br>We'll email your code the day Scroll the Quran is on the App Store, in shaa Allah.</div>
+  <p class="fine">One email at launch with your code. No spam, unsubscribe anytime. <a href="../privacy.html" style="color:inherit">Privacy</a></p>
+  <div class="phone"><img src="../assets/screenshot-feed.png" alt="Scroll the Quran app showing an ayah in Arabic and English" width="640" height="1391"></div>
+</main>
+<footer><a href="../">Home</a><a href="../privacy.html">Privacy</a><a href="../support.html">Support</a></footer>
+</div>
+<script>
+  // Remember where signups come from (?src=tiktok) so we know which posts convert.
+  const p = new URLSearchParams(location.search).get('src'); if (p) document.getElementById('src').value = p.slice(0, 40);
+  const form = document.getElementById('wl');
+  form.addEventListener('submit', (e) => {
+    if (form.getAttribute('action') === 'FORM_ACTION') { e.preventDefault(); alert('Waitlist opens very soon!'); return; }
+    setTimeout(() => { form.style.display = 'none'; document.getElementById('done').style.display = 'block'; }, 300);
+  });
+</script>
+</body></html>
