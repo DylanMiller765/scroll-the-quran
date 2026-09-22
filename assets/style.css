@@ -1,0 +1,30 @@
+:root{--canvas:#F9F8FD;--card:#fff;--ink:#0E0E0E;--muted:#6F6E73;--hair:#EEEDF2;--warm:#F5F3EF}
+@media (prefers-color-scheme:dark){:root{--canvas:#0F0F11;--card:#1C1C1F;--ink:#F4F3F0;--muted:#9A9AA0;--hair:#2C2C30;--warm:#232326}}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--canvas);color:var(--ink);font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+.serif{font-family:"New York","Iowan Old Style",Georgia,"Times New Roman",serif}
+nav{display:flex;align-items:center;justify-content:space-between;padding:20px 0}
+nav a{color:var(--ink);text-decoration:none;font-weight:600;display:flex;align-items:center;gap:10px}
+nav img{width:34px;height:34px;border-radius:9px}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:40px 0 70px}
+h1{font-size:clamp(40px,6vw,64px);line-height:1.05;font-weight:500;margin:0 0 18px;letter-spacing:-.5px}
+.lead{font-size:20px;color:var(--muted);margin:0 0 28px;max-width:30em}
+.cta{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:var(--canvas);padding:16px 26px;border-radius:999px;font-weight:600;text-decoration:none}
+.note{color:var(--muted);font-size:14px;margin-top:12px}
+.phone{justify-self:center;width:min(320px,80vw);border-radius:44px;box-shadow:0 30px 60px rgba(0,0,0,.12);border:8px solid #111}
+.phone img{display:block;width:100%;height:auto;border-radius:36px}
+section{padding:56px 0;border-top:1px solid var(--hair)}
+h2{font-size:34px;font-weight:500;margin:0 0 24px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--warm);border-radius:16px;padding:22px}
+.card h3{margin:0 0 6px;font-size:18px}.card p{margin:0;color:var(--muted);font-size:16px}
+details{background:var(--card);border:1px solid var(--hair);border-radius:16px;padding:16px 20px;margin-bottom:10px}
+summary{font-weight:600;cursor:pointer}details p{color:var(--muted);margin:10px 0 0}
+blockquote{margin:0;padding:22px 24px;border-left:3px solid var(--ink);background:var(--card);border-radius:0 16px 16px 0;font-size:21px}
+blockquote cite{display:block;margin-top:10px;font-size:14px;color:var(--muted);font-style:normal}
+footer{padding:36px 0 60px;color:var(--muted);font-size:14px;border-top:1px solid var(--hair)}
+footer a{color:var(--muted);margin-right:18px}
+.doc{max-width:720px;padding:20px 0 60px}.doc h1{font-size:40px}.doc h2{font-size:22px;margin:32px 0 8px}
+.doc a{color:var(--ink)}
+@media (max-width:760px){.hero{grid-template-columns:1fr;padding-top:10px}.grid{grid-template-columns:1fr}.phone{margin-top:10px}}
