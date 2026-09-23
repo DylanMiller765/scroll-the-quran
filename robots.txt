@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://dylanmiller765.github.io/scroll-the-quran/sitemap.xml
+Sitemap: https://dylanmiller765.github.io/tilawify/sitemap.xml
